@@ -1,23 +1,25 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import logoCarckiWhite from "@/assets/logo-carcki-white.png";
+import logoDeceuninck from "@/assets/logo-deceuninck-white.png";
 
 export function Footer() {
   return (
     <footer className="bg-ink text-background mt-32">
       <div className="container-x py-20 grid gap-16 md:grid-cols-12">
         <div className="md:col-span-5 space-y-6">
-          <div className="flex items-center gap-2">
-            <span className="font-display text-3xl">Carcki</span>
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          </div>
+          <img src={logoCarckiWhite} alt="Carcki" className="h-14 w-auto" />
           <p className="text-sm leading-relaxed text-background/60 max-w-md">
             Esquadrias de PVC com tecnologia belga Deceuninck. Sofisticação,
             resistência e o melhor custo-benefício para residências,
             apartamentos e empreendimentos comerciais.
           </p>
-          <p className="text-xs tracking-widest uppercase text-background/40">
-            Garantia de até 20 anos
-          </p>
+          <div className="pt-4 border-t border-background/10 max-w-xs">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-background/40 mb-3">
+              Tecnologia parceira
+            </p>
+            <img src={logoDeceuninck} alt="Deceuninck" className="h-6 w-auto opacity-90" />
+          </div>
         </div>
 
         <div className="md:col-span-3 space-y-5">

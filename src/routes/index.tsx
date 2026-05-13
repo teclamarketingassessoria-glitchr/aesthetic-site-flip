@@ -168,9 +168,9 @@ function HomePage() {
           muted
           playsInline
           poster={diferenciaisImg}
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-ink/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/25 to-ink/55" />
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
