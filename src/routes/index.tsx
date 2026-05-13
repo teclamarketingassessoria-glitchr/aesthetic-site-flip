@@ -53,12 +53,8 @@ function HomePage() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col">
-        <ImagePlaceholder
-          label="Hero · ambiente com porta de correr ampla"
-          ratio="auto"
-          className="absolute inset-0 !bg-ink"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/20 to-background" />
+        <KenBurnsHero src={heroImage} alt="Residência com esquadrias Carcki" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-background" />
 
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">
