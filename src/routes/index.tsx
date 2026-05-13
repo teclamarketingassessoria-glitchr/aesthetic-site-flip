@@ -4,7 +4,19 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
+import { KenBurnsHero } from "@/components/site/KenBurnsHero";
 import { products } from "@/data/products";
+import heroImage from "@/assets/projects/casa-piscina.jpg";
+import productPortaImg from "@/assets/projects/porta-entrada-branca.jpg";
+import productJanelaImg from "@/assets/projects/janela-classica.jpg";
+import productCorrerImg from "@/assets/projects/area-piscina-correr.jpg";
+import diferenciaisImg from "@/assets/projects/casa-moderna-vidros.jpg";
+
+const productImages: Record<string, string> = {
+  "porta-de-abrir": productPortaImg,
+  "janela-de-correr": productJanelaImg,
+  "porta-de-correr": productCorrerImg,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,12 +53,8 @@ function HomePage() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col">
-        <ImagePlaceholder
-          label="Hero · ambiente com porta de correr ampla"
-          ratio="auto"
-          className="absolute inset-0 !bg-ink"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/20 to-background" />
+        <KenBurnsHero src={heroImage} alt="Residência com esquadrias Carcki" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-background" />
 
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">
@@ -132,7 +140,13 @@ function HomePage() {
             {products.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 0.1}>
                 <Link to="/produtos/$slug" params={{ slug: p.slug }} className="group block">
-                  <ImagePlaceholder label={p.name} ratio="4/5" className="mb-5" />
+                  {productImages[p.slug] ? (
+                    <div className="mb-5 overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                      <img src={productImages[p.slug]} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={p.name} ratio="4/5" className="mb-5" />
+                  )}
                   <p className="eyebrow mb-2">{String(i + 1).padStart(2, "0")}</p>
                   <h3 className="font-display text-2xl text-ink mb-2 group-hover:text-primary transition-colors">
                     {p.name}
@@ -147,7 +161,7 @@ function HomePage() {
 
       {/* DIFERENCIAIS */}
       <section className="relative py-32 bg-ink text-background overflow-hidden">
-        <ImagePlaceholder label="Textura · perfis de PVC" ratio="auto" className="absolute inset-0 !bg-ink opacity-20" />
+        <img src={diferenciaisImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
