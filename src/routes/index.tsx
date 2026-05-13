@@ -161,7 +161,16 @@ function HomePage() {
 
       {/* DIFERENCIAIS */}
       <section className="relative py-32 bg-ink text-background overflow-hidden">
-        <img src={diferenciaisImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <video
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_144509_89e2d612-8af2-45c3-90f4-4831bc60715d.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={diferenciaisImg}
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-ink/70" />
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
