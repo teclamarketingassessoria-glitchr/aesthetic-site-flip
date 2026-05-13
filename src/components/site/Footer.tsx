@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
-import logoCarckiWhite from "@/assets/logo-carcki-white.png";
-import logoDeceuninck from "@/assets/logo-deceuninck-white.png";
+import logoCarckiWhite from "@/assets/logo-carcki-footer.png";
+import logoDeceuninck from "@/assets/logo-deceuninck-footer.png";
 
 export function Footer() {
   return (

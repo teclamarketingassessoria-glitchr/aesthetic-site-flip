@@ -32,7 +32,7 @@ export function Header() {
     >
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center group" aria-label="Carcki">
-          <img src={logoCarcki} alt="Carcki" className="h-12 w-12 transition-transform group-hover:scale-105" />
+          <img src={logoCarcki} alt="Carcki" className="h-16 w-16 transition-transform group-hover:scale-105" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">

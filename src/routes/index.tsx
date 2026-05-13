@@ -54,12 +54,12 @@ function HomePage() {
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col">
         <KenBurnsHero src={heroImage} alt="Residência com esquadrias Carcki" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/50 to-ink/65" />
 
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">
             <Reveal>
-              <p className="eyebrow text-background/80 mb-8">
+              <p className="eyebrow text-zinc-300 mb-8">
                 Esquadrias de PVC · Brusque, SC
               </p>
             </Reveal>
@@ -67,12 +67,12 @@ function HomePage() {
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-background max-w-5xl leading-[0.95]">
                 Design, conforto<br />
                 e durabilidade<br />
-                <span className="italic text-background/80">em cada esquadria.</span>
+                <span className="italic bg-primary text-white px-3 py-1 inline-block mt-2">em cada esquadria.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-5xl">
-                <p className="text-lg md:text-xl text-background/80 max-w-md leading-relaxed">
+                <p className="text-lg md:text-xl text-zinc-300 max-w-md leading-relaxed">
                   Portas e janelas de PVC que valorizam seu projeto com isolamento acústico, conforto térmico e garantia de 20 anos.
                 </p>
                 <Link
@@ -174,7 +174,7 @@ function HomePage() {
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
-              <p className="eyebrow text-background/50 mb-6">Por que Carcki</p>
+              <p className="eyebrow text-white mb-6">Por que Carcki</p>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
                 O que faz da Carcki a escolha certa para o seu projeto.
               </h2>
@@ -183,8 +183,8 @@ function HomePage() {
           <div className="md:col-span-6 md:col-start-7">
             <ul className="divide-y divide-background/10">
               {differentials.map((d, i) => (
-                <Reveal key={d} delay={i * 0.05} className="py-5 flex items-baseline gap-6">
-                  <span className="font-display text-sm text-primary tabular-nums">
+                <Reveal key={d} delay={i * 0.05} className="py-5 flex items-center gap-6">
+                  <span className="font-display text-sm bg-primary text-white tabular-nums w-10 h-8 flex items-center justify-center shrink-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="text-xl md:text-2xl font-display">{d}</span>
