@@ -31,11 +31,8 @@ export function Header() {
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoCarcki} alt="Carcki" className="h-10 w-10 transition-transform group-hover:scale-105" />
-          <span className={`font-display text-2xl tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-background"}`}>
-            Carcki
-          </span>
+        <Link to="/" className="flex items-center group" aria-label="Carcki">
+          <img src={logoCarcki} alt="Carcki" className="h-12 w-12 transition-transform group-hover:scale-105" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
