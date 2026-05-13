@@ -48,6 +48,16 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes testimonials-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.testimonials-track {
+  animation: testimonials-scroll 55s linear infinite;
+}
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
 
 :root {
   --radius: 0.25rem;

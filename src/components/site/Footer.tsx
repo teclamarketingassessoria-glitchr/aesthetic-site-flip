@@ -2,11 +2,21 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 import logoCarckiWhite from "@/assets/logo-carcki-footer.png";
 import logoDeceuninck from "@/assets/logo-deceuninck-footer.png";
+import logoCarckiRound from "@/assets/logo-carcki-round.png";
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-background mt-32">
-      <div className="container-x py-20 grid gap-16 md:grid-cols-12">
+    <footer className="text-background mt-32 relative overflow-hidden" style={{ backgroundColor: "#2a2a2a" }}>
+      {/* Watermark */}
+      <div className="absolute right-0 bottom-0 pointer-events-none select-none" aria-hidden>
+        <img
+          src={logoCarckiRound}
+          alt=""
+          className="h-80 w-80 opacity-[0.06] translate-x-16 translate-y-16"
+        />
+      </div>
+
+      <div className="container-x py-20 grid gap-16 md:grid-cols-12 relative">
         <div className="md:col-span-5 space-y-6">
           <img src={logoCarckiWhite} alt="Carcki" className="h-14 w-auto" />
           <p className="text-sm leading-relaxed text-background/60 max-w-md">
@@ -41,7 +51,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone size={16} className="text-primary shrink-0" />
-              <a href="tel:+5511987654321" className="text-background/80 hover:text-background">+55 11 98765-4321</a>
+              <a href="tel:+5547921403210" className="text-background/80 hover:text-background">+55 47 9214-0321</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-primary shrink-0" />
@@ -49,7 +59,13 @@ export function Footer() {
             </li>
           </ul>
           <div className="flex gap-3 pt-2">
-            <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-background/15 grid place-items-center hover:bg-primary hover:border-primary transition-colors">
+            <a
+              href="https://www.instagram.com/carckiesquadriasdepvc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="h-10 w-10 rounded-full border border-background/15 grid place-items-center hover:bg-primary hover:border-primary transition-colors"
+            >
               <Instagram size={16} />
             </a>
             <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-background/15 grid place-items-center hover:bg-primary hover:border-primary transition-colors">
@@ -59,7 +75,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-background/10">
+      <div className="border-t border-background/10 relative">
         <div className="container-x py-6 flex flex-col md:flex-row gap-3 justify-between text-xs text-background/50">
           <p>© {new Date().getFullYear()} Carcki Esquadrias de PVC. Todos os direitos reservados.</p>
           <p>Tecnologia belga Deceuninck</p>

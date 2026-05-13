@@ -11,6 +11,9 @@ import productPortaImg from "@/assets/projects/porta-entrada-branca.jpg";
 import productJanelaImg from "@/assets/projects/janela-classica.jpg";
 import productCorrerImg from "@/assets/projects/area-piscina-correr.jpg";
 import diferenciaisImg from "@/assets/projects/casa-moderna-vidros.jpg";
+import teamCarckiImg from "@/assets/team-carcki.jpg";
+
+const WA_LINK = "https://api.whatsapp.com/send?phone=5547992140321";
 
 const productImages: Record<string, string> = {
   "porta-de-abrir": productPortaImg,
@@ -48,18 +51,29 @@ const differentials = [
   "Tecnologia belga Deceuninck",
 ];
 
+const testimonials = [
+  { who: "Giselle Berisso", quote: "Muito satisfeita com a qualidade das vendas e do atendimento tanto na instalação quanto na manutenção. Eles são altamente recomendados. Daniele um amor em sua atenção." },
+  { who: "Luciano de Limas", quote: "A empresa já prestou excelentes serviços em minhas propriedades. Super recomendo — facilidade para negociar, entregam e instalam no prazo. A empresa é comprometida com a satisfação do cliente." },
+  { who: "Faturamento Marroni", quote: "Pessoal super competente, empresa séria e com produtos de qualidade. Estou muito satisfeito e recomendo essa empresa." },
+  { who: "Schirlei Boos Salsi", quote: "Atendimento de primeira. Foram muito atenciosos e apresentaram seus produtos e obras realizadas. Empresa de primeira linha com certeza." },
+  { who: "Esequiel Morais De Quadros", quote: "Excelente atendimento desde o primeiro contato, instalação impecável, material de alta qualidade, e com todas as instruções de conservação necessárias para mantermos as janelas e portas sempre novas!" },
+  { who: "Paulo Peçanha", quote: "Ótimo atendimento, serviço de qualidade e sempre prestativos! Estão de parabéns." },
+  { who: "Ivair J. Silvestre", quote: "Ótimo atendimento, produto excelente." },
+  { who: "Hopena Digital", quote: "Gostei muito do atendimento e das esquadrias, ficaram lindas e são super fáceis de limpar." },
+];
+
 function HomePage() {
   return (
     <SiteLayout>
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col">
         <KenBurnsHero src={heroImage} alt="Residência com esquadrias Carcki" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/50 to-ink/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-background" />
 
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">
             <Reveal>
-              <p className="eyebrow text-zinc-300 mb-8">
+              <p className="eyebrow text-foreground/60 mb-8">
                 Esquadrias de PVC · Brusque, SC
               </p>
             </Reveal>
@@ -72,16 +86,18 @@ function HomePage() {
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-5xl">
-                <p className="text-lg md:text-xl text-zinc-300 max-w-md leading-relaxed">
+                <p className="text-lg md:text-xl text-foreground/75 max-w-md leading-relaxed">
                   Portas e janelas de PVC que valorizam seu projeto com isolamento acústico, conforto térmico e garantia de 20 anos.
                 </p>
-                <Link
-                  to="/contato"
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 rounded-full bg-primary text-primary-foreground px-7 py-4 text-sm font-medium tracking-wide w-fit"
                 >
                   Peça seu orçamento
                   <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
+                </a>
               </div>
             </Reveal>
           </div>
@@ -90,24 +106,36 @@ function HomePage() {
 
       {/* QUEM SOMOS */}
       <section className="py-32">
-        <div className="container-x grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
+        <div className="container-x grid md:grid-cols-2 gap-16 items-center">
+          <Reveal>
+            <div className="relative overflow-hidden">
+              <img
+                src={teamCarckiImg}
+                alt="Equipe Carcki"
+                className="w-full h-[480px] object-cover object-center"
+              />
+            </div>
+          </Reveal>
+          <div className="space-y-6">
             <Reveal>
-              <p className="eyebrow mb-6">Quem somos</p>
-              <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight">
+              <p className="eyebrow mb-4">Quem somos</p>
+              <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight mb-6">
                 Tecnologia de ponta, executada com precisão.
               </h2>
             </Reveal>
-          </div>
-          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-foreground/75 leading-relaxed">
             <Reveal delay={0.1}>
-              <p>
-                Combinamos matéria-prima de alta qualidade e uma equipe dedicada para oferecer esquadrias de PVC que unem sofisticação, resistência e o melhor custo-benefício.
+              <p className="text-base text-foreground/75 leading-relaxed">
+                A trajetória da CARCKI é marcada por dedicação, aprendizado e paixão pelo que faz. Tudo começou com o sonho de um jovem determinado, que aos 20 anos iniciou sua jornada profissional no ramo de Esquadrias de PVC.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="text-base text-foreground/75 leading-relaxed">
+                Durante quase 10 anos, ele trabalhou em duas empresas diferentes, aprendendo profundamente sobre o mercado, os processos de produção, atendimento ao cliente e a importância da qualidade e da confiança nos negócios.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <p>
-                Em parceria com a <span className="text-ink">Deceuninck</span>, fornecedora internacional de perfis de PVC e referência em tecnologia belga, cada esquadria carrega a confiança de uma marca global e a excelência de uma execução nacional.
+              <p className="text-base text-foreground/75 leading-relaxed">
+                Hoje, 15 anos depois, a CARCKI se consolidou como referência em Esquadrias de PVC, atendendo clientes em todo o país — mantendo os mesmos valores que inspiraram sua criação: <span className="text-ink font-medium">qualidade, confiança e inovação.</span>
               </p>
             </Reveal>
             <Reveal delay={0.3}>
@@ -174,8 +202,8 @@ function HomePage() {
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
-              <p className="eyebrow text-white mb-6">Por que Carcki</p>
-              <h2 className="font-display text-4xl md:text-5xl leading-tight">
+              <span className="eyebrow bg-primary text-white px-3 py-1.5 mb-6 inline-block">Por que Carcki</span>
+              <h2 className="font-display text-4xl md:text-5xl leading-tight mt-4">
                 O que faz da Carcki a escolha certa para o seu projeto.
               </h2>
             </Reveal>
@@ -218,29 +246,34 @@ function HomePage() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="py-32 bg-stone">
-        <div className="container-x">
+      <section className="py-32 bg-stone overflow-hidden">
+        <div className="container-x mb-12">
           <Reveal>
             <p className="eyebrow mb-4">Depoimentos</p>
             <h2 className="font-display text-4xl md:text-5xl text-ink max-w-2xl leading-tight">
               A confiança de quem já escolheu a Carcki.
             </h2>
           </Reveal>
+        </div>
 
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
-            {[
-              { who: "Cliente Residencial", quote: "A Carcki foi essencial para o sucesso do nosso projeto. O isolamento acústico realmente fez diferença no conforto da nossa casa." },
-              { who: "Arquiteto Parceiro", quote: "Com as portas de PVC da Carcki conseguimos unir sofisticação e durabilidade, além da garantia que nos trouxe segurança na escolha." },
-            ].map((t, i) => (
-              <Reveal key={t.who} delay={i * 0.1} className="bg-background p-10 md:p-14">
-                <p className="font-display text-2xl md:text-3xl text-ink leading-relaxed">
-                  “{t.quote}”
-                </p>
-                <div className="mt-10 pt-6 border-t border-border flex items-center justify-between">
-                  <p className="text-sm tracking-wide text-foreground/70">{t.who}</p>
-                  <span className="text-primary text-sm tracking-widest">★★★★★</span>
+        <div className="overflow-hidden">
+          <div className="testimonials-track flex gap-6 w-max">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <div
+                key={i}
+                className="w-80 shrink-0 bg-background p-8 flex flex-col justify-between"
+                style={{ minHeight: "220px" }}
+              >
+                <div>
+                  <p className="text-amber-400 text-sm mb-4">★★★★★</p>
+                  <p className="font-display text-lg text-ink leading-relaxed">
+                    "{t.quote}"
+                  </p>
                 </div>
-              </Reveal>
+                <p className="mt-6 text-sm text-foreground/60 tracking-wide font-medium pt-4 border-t border-border">
+                  {t.who}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -250,18 +283,23 @@ function HomePage() {
       <section className="py-32">
         <div className="container-x">
           <Reveal>
-            <div className="bg-ink text-background p-12 md:p-20 grid md:grid-cols-12 gap-10 items-end">
+            <div
+              className="text-background p-12 md:p-20 grid md:grid-cols-12 gap-10 items-end"
+              style={{ background: "linear-gradient(135deg, #2c2826 0%, #1c1917 60%, #3a1a1a 100%)" }}
+            >
               <h2 className="md:col-span-7 font-display text-4xl md:text-6xl leading-[1.05]">
                 Seu projeto merece esquadrias <span className="italic">à altura</span>.
               </h2>
               <div className="md:col-span-5 md:text-right">
-                <Link
-                  to="/contato"
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 rounded-full bg-primary text-primary-foreground px-8 py-5 text-sm font-medium tracking-wide"
                 >
                   Peça seu orçamento
                   <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
+                </a>
               </div>
             </div>
           </Reveal>

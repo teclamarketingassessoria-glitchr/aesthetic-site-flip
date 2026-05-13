@@ -49,13 +49,15 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
-          to="/contato"
+        <a
+          href="https://api.whatsapp.com/send?phone=5547992140321"
+          target="_blank"
+          rel="noopener noreferrer"
           className={`hidden md:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] ${scrolled ? "border-foreground/15 text-foreground hover:bg-foreground hover:text-background drop-shadow-none" : "border-white/40 text-white hover:bg-white hover:text-foreground"}`}
         >
           Peça seu orçamento
           <span className="h-1 w-1 rounded-full bg-primary" />
-        </Link>
+        </a>
 
         <button
           aria-label="Menu"
