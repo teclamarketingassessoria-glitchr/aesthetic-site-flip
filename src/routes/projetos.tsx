@@ -60,7 +60,9 @@ function ProjectsPage() {
         <div className="container-x grid md:grid-cols-2 gap-x-6 gap-y-20">
           {projects.map((p, i) => (
             <Reveal key={p.name} delay={(i % 2) * 0.1} className={i % 3 === 0 ? "md:mt-20" : ""}>
-              <ImagePlaceholder label={p.name} ratio={p.ratio} />
+              <div className="overflow-hidden bg-stone group" style={{ aspectRatio: p.ratio }}>
+                <img src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" loading="lazy" />
+              </div>
               <div className="mt-5 flex items-baseline justify-between">
                 <h2 className="font-display text-2xl text-ink">{p.name}</h2>
                 <p className="text-xs tracking-widest uppercase text-muted-foreground">{p.location}</p>
