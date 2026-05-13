@@ -37,18 +37,18 @@ export const products: Product[] = [
     applications: ["Salas integradas", "Varandas e terraços", "Áreas gourmet"],
   },
   {
-    slug: "porta-balcao",
-    name: "Porta Balcão",
-    tagline: "Luz e amplitude em escala arquitetônica.",
+    slug: "janelas",
+    name: "Janelas",
+    tagline: "Beleza e funcionalidade em cada vão.",
     description:
-      "Folhas de grande dimensão para integrar interior e exterior em escala arquitetônica. Ideal para projetos contemporâneos com pé-direito alto.",
+      "Janelas de PVC que unem estética refinada e desempenho superior. Disponíveis em diversos modelos, proporcionam luminosidade, ventilação e isolamento em qualquer ambiente.",
     features: [
-      "Folhas até 2,40m de altura",
-      "Múltiplas configurações de abertura",
+      "Múltiplos modelos de abertura",
       "Vidro duplo com câmara de ar",
-      "Perfis reforçados",
+      "Isolamento térmico e acústico",
+      "Perfis coloridos e exclusivos",
     ],
-    applications: ["Salas amplas", "Coberturas", "Projetos residenciais de alto padrão"],
+    applications: ["Residências", "Apartamentos", "Projetos de alto padrão"],
   },
   {
     slug: "janela-de-correr",

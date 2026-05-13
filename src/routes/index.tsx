@@ -10,6 +10,7 @@ import heroImage from "@/assets/projects/casa-piscina.jpg";
 import productPortaImg from "@/assets/projects/porta-entrada-branca.jpg";
 import productJanelaImg from "@/assets/projects/janela-classica.jpg";
 import productCorrerImg from "@/assets/projects/area-piscina-correr.jpg";
+import productJanelasBrancaImg from "@/assets/projects/janela-branca.jpg";
 import diferenciaisImg from "@/assets/projects/casa-moderna-vidros.jpg";
 import teamCarckiImg from "@/assets/team-carcki.jpg";
 
@@ -19,6 +20,7 @@ const productImages: Record<string, string> = {
   "porta-de-abrir": productPortaImg,
   "janela-de-correr": productJanelaImg,
   "porta-de-correr": productCorrerImg,
+  "janelas": productJanelasBrancaImg,
 };
 
 export const Route = createFileRoute("/")({
@@ -69,6 +71,7 @@ function HomePage() {
       <section className="relative min-h-screen flex flex-col">
         <KenBurnsHero src={heroImage} alt="Residência com esquadrias Carcki" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-background" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-border/60" />
 
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">

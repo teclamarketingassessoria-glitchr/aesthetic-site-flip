@@ -65,7 +65,7 @@
   /* Brand */
   --background: oklch(0.985 0.003 80);          /* off-white quente */
   --foreground: oklch(0.18 0.01 60);            /* preto suave */
-  --ink: oklch(0.14 0.008 60);                  /* tinta editorial */
+  --ink: oklch(0.28 0.012 60);                  /* cinza escuro quente */
   --stone: oklch(0.94 0.005 70);                /* cinza pedra */
 
   --card: oklch(1 0 0);
