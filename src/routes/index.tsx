@@ -4,7 +4,19 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
+import { KenBurnsHero } from "@/components/site/KenBurnsHero";
 import { products } from "@/data/products";
+import heroImage from "@/assets/projects/casa-piscina.jpg";
+import productPortaImg from "@/assets/projects/porta-entrada-branca.jpg";
+import productJanelaImg from "@/assets/projects/janela-classica.jpg";
+import productCorrerImg from "@/assets/projects/area-piscina-correr.jpg";
+import diferenciaisImg from "@/assets/projects/casa-moderna-vidros.jpg";
+
+const productImages: Record<string, string> = {
+  "porta-de-abrir": productPortaImg,
+  "janela-de-correr": productJanelaImg,
+  "porta-de-correr": productCorrerImg,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
