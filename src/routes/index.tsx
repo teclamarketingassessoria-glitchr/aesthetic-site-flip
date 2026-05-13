@@ -109,13 +109,13 @@ function HomePage() {
 
       {/* QUEM SOMOS */}
       <section className="py-32">
-        <div className="container-x grid md:grid-cols-2 gap-16 items-center">
+        <div className="container-x grid md:grid-cols-2 gap-16 items-start">
           <Reveal>
             <div className="relative overflow-hidden">
               <img
                 src={teamCarckiImg}
                 alt="Equipe Carcki"
-                className="w-full h-[480px] object-cover object-center"
+                className="w-full h-auto"
               />
             </div>
           </Reveal>

@@ -18,7 +18,7 @@ export function Footer() {
 
       <div className="container-x py-20 grid gap-16 md:grid-cols-12 relative">
         <div className="md:col-span-5 space-y-6">
-          <img src={logoCarckiWhite} alt="Carcki" className="h-14 w-auto" />
+          <img src={logoCarckiWhite} alt="Carcki" className="h-36 w-auto" />
           <p className="text-sm leading-relaxed text-background/60 max-w-md">
             Esquadrias de PVC com tecnologia belga Deceuninck. Sofisticação,
             resistência e o melhor custo-benefício para residências,
@@ -28,7 +28,7 @@ export function Footer() {
             <p className="text-[10px] tracking-[0.25em] uppercase text-background/40 mb-3">
               Tecnologia parceira
             </p>
-            <img src={logoDeceuninck} alt="Deceuninck" className="h-6 w-auto opacity-90" />
+            <img src={logoDeceuninck} alt="Deceuninck" className="h-20 w-auto opacity-90" />
           </div>
         </div>
 
