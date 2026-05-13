@@ -6,3 +6,9 @@ id = "OBUr_DlCV6BgXj7LxP4ud"
 uri = "file://carcki-site.tar.gz"
 type = "unspecified"
 title = "carcki-site.tar.gz"
+
+[[outputs]]
+id = "C-mnJtjbbh9GbCTnKfSjI"
+uri = "file://carcki-netlify.tar.gz"
+type = "unspecified"
+title = "carcki-netlify.tar.gz — source para Netlify (11 MB)"
