@@ -140,7 +140,13 @@ function HomePage() {
             {products.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 0.1}>
                 <Link to="/produtos/$slug" params={{ slug: p.slug }} className="group block">
-                  <ImagePlaceholder label={p.name} ratio="4/5" className="mb-5" />
+                  {productImages[p.slug] ? (
+                    <div className="mb-5 overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                      <img src={productImages[p.slug]} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder label={p.name} ratio="4/5" className="mb-5" />
+                  )}
                   <p className="eyebrow mb-2">{String(i + 1).padStart(2, "0")}</p>
                   <h3 className="font-display text-2xl text-ink mb-2 group-hover:text-primary transition-colors">
                     {p.name}
@@ -155,7 +161,7 @@ function HomePage() {
 
       {/* DIFERENCIAIS */}
       <section className="relative py-32 bg-ink text-background overflow-hidden">
-        <ImagePlaceholder label="Textura · perfis de PVC" ratio="auto" className="absolute inset-0 !bg-ink opacity-20" />
+        <img src={diferenciaisImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
