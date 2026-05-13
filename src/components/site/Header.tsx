@@ -40,8 +40,8 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className={`text-sm tracking-wide transition-colors ${scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"}`}
-              activeProps={{ className: scrolled ? "text-foreground" : "text-background" }}
+            className={`text-sm tracking-wide transition-colors ${scrolled ? "text-foreground/70 hover:text-foreground" : "text-white/85 hover:text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]"}`}
+              activeProps={{ className: scrolled ? "text-foreground" : "text-white" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
@@ -51,7 +51,7 @@ export function Header() {
 
         <Link
           to="/contato"
-          className={`hidden md:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${scrolled ? "border-foreground/15 text-foreground hover:bg-foreground hover:text-background" : "border-background/30 text-background hover:bg-background hover:text-foreground"}`}
+          className={`hidden md:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] ${scrolled ? "border-foreground/15 text-foreground hover:bg-foreground hover:text-background drop-shadow-none" : "border-white/40 text-white hover:bg-white hover:text-foreground"}`}
         >
           Peça seu orçamento
           <span className="h-1 w-1 rounded-full bg-primary" />
@@ -59,7 +59,7 @@ export function Header() {
 
         <button
           aria-label="Menu"
-          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-background"}`}
+          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
           onClick={() => setOpen((o) => !o)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
