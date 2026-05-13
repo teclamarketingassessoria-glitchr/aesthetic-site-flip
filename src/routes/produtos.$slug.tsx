@@ -99,7 +99,7 @@ function ProductPage() {
             <Reveal delay={0.1}>
               <p className="eyebrow mb-6">Características</p>
               <ul className="space-y-4">
-                {product.features.map((f) => (
+                {product.features.map((f: string) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-ink">
                     <Check size={14} className="mt-1 text-primary shrink-0" />
                     <span>{f}</span>
@@ -113,7 +113,7 @@ function ProductPage() {
             <Reveal delay={0.2}>
               <p className="eyebrow mb-6">Aplicações</p>
               <ul className="space-y-3 text-sm text-ink">
-                {product.applications.map((a) => (
+                {product.applications.map((a: string) => (
                   <li key={a} className="border-b border-border pb-3">{a}</li>
                 ))}
               </ul>
