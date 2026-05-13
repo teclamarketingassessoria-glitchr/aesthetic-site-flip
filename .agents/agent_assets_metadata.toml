@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "OBUr_DlCV6BgXj7LxP4ud"
+uri = "file://carcki-site.tar.gz"
+type = "unspecified"
+title = "carcki-site.tar.gz"
