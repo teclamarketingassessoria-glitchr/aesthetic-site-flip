@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoCarcki from "@/assets/logo-carcki.png";
 
 const nav = [
   { to: "/", label: "Início" },
@@ -30,11 +31,11 @@ export function Header() {
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-display text-2xl tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src={logoCarcki} alt="Carcki" className="h-10 w-10 transition-transform group-hover:scale-105" />
+          <span className={`font-display text-2xl tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-background"}`}>
             Carcki
           </span>
-          <span className="h-1.5 w-1.5 rounded-full bg-primary transition-transform group-hover:scale-150" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -42,8 +43,8 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors"
-              activeProps={{ className: "text-foreground" }}
+              className={`text-sm tracking-wide transition-colors ${scrolled ? "text-foreground/70 hover:text-foreground" : "text-background/80 hover:text-background"}`}
+              activeProps={{ className: scrolled ? "text-foreground" : "text-background" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
@@ -53,7 +54,7 @@ export function Header() {
 
         <Link
           to="/contato"
-          className="hidden md:inline-flex items-center gap-2 rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-medium hover:bg-foreground hover:text-background transition-all"
+          className={`hidden md:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${scrolled ? "border-foreground/15 text-foreground hover:bg-foreground hover:text-background" : "border-background/30 text-background hover:bg-background hover:text-foreground"}`}
         >
           Peça seu orçamento
           <span className="h-1 w-1 rounded-full bg-primary" />
@@ -61,7 +62,7 @@ export function Header() {
 
         <button
           aria-label="Menu"
-          className="md:hidden p-2"
+          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-background"}`}
           onClick={() => setOpen((o) => !o)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
