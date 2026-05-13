@@ -18,8 +18,8 @@ export function Footer() {
 
       <div className="container-x py-20 grid gap-16 md:grid-cols-12 relative">
         <div className="md:col-span-5 space-y-6">
-          <div className="relative overflow-hidden" style={{ height: '44px' }}>
-            <img src={logoCarckiWhite} alt="Carcki" style={{ position: 'absolute', height: '420px', width: 'auto', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
+          <div className="relative overflow-hidden" style={{ height: '30px' }}>
+            <img src={logoCarckiWhite} alt="Carcki" style={{ position: 'absolute', height: '200px', width: 'auto', top: '50%', left: '-10px', transform: 'translateY(-50%)' }} />
           </div>
           <p className="text-sm leading-relaxed text-background/60 max-w-md">
             Esquadrias de PVC com tecnologia belga Deceuninck. Sofisticação,
