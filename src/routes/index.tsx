@@ -76,7 +76,7 @@ function HomePage() {
         <div className="relative flex-1 flex items-end pt-32 pb-20">
           <div className="container-x w-full">
             <Reveal>
-              <p className="eyebrow text-foreground/60 mb-8">
+              <p className="eyebrow mb-8" style={{ color: "white" }}>
                 Esquadrias de PVC · Brusque, SC
               </p>
             </Reveal>
@@ -89,7 +89,7 @@ function HomePage() {
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 max-w-5xl">
-                <p className="text-lg md:text-xl text-foreground/75 max-w-md leading-relaxed">
+                <p className="text-lg md:text-xl text-white/85 max-w-md leading-relaxed">
                   Portas e janelas de PVC que valorizam seu projeto com isolamento acústico, conforto térmico e garantia de 20 anos.
                 </p>
                 <a
@@ -205,7 +205,7 @@ function HomePage() {
         <div className="container-x relative grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
-              <span className="eyebrow bg-primary text-white px-3 py-1.5 mb-6 inline-block">Por que Carcki</span>
+              <span className="eyebrow bg-primary px-3 py-1.5 mb-6 inline-block" style={{ color: "white" }}>Por que Carcki</span>
               <h2 className="font-display text-4xl md:text-5xl leading-tight mt-4">
                 O que faz da Carcki a escolha certa para o seu projeto.
               </h2>
@@ -287,8 +287,7 @@ function HomePage() {
         <div className="container-x">
           <Reveal>
             <div
-              className="text-background p-12 md:p-20 grid md:grid-cols-12 gap-10 items-end"
-              style={{ background: "linear-gradient(135deg, #2c2826 0%, #1c1917 60%, #3a1a1a 100%)" }}
+              className="bg-primary text-white p-12 md:p-20 grid md:grid-cols-12 gap-10 items-end"
             >
               <h2 className="md:col-span-7 font-display text-4xl md:text-6xl leading-[1.05]">
                 Seu projeto merece esquadrias <span className="italic">à altura</span>.
@@ -298,7 +297,7 @@ function HomePage() {
                   href={WA_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full bg-primary text-primary-foreground px-8 py-5 text-sm font-medium tracking-wide"
+                  className="group inline-flex items-center gap-3 rounded-full bg-white text-primary px-8 py-5 text-sm font-medium tracking-wide hover:bg-white/90 transition-colors"
                 >
                   Peça seu orçamento
                   <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
