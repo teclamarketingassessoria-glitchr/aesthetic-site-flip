@@ -46,9 +46,9 @@ function ContactPage() {
             <Reveal delay={0.1}>
               <div>
                 <p className="eyebrow mb-3">Telefone</p>
-                <a href="tel:+5511987654321" className="flex items-center gap-3 text-lg text-ink hover:text-primary transition-colors">
+                <a href="tel:+5547992140321" className="flex items-center gap-3 text-lg text-ink hover:text-primary transition-colors">
                   <Phone size={18} className="text-primary shrink-0" />
-                  +55 11 98765-4321
+                  +55 47 9214-0321
                 </a>
               </div>
             </Reveal>
